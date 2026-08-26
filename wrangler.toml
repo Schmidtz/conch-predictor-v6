@@ -1,0 +1,16 @@
+name = "conch-race-predictor"
+main = "worker.ts"
+compatibility_date = "2026-08-26"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+
+# Create the D1 database in Cloudflare, then replace YOUR_DATABASE_ID below
+# with its Database ID. Run: npx wrangler d1 execute conch-race-db --remote --file=schema.sql
+[[d1_databases]]
+binding = "DB"
+database_name = "conch-race-db"
+database_id = "YOUR_DATABASE_ID"

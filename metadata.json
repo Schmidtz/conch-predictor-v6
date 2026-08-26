@@ -1,0 +1,8 @@
+{
+  "name": "Conch Race Predictor",
+  "description": "Monte Carlo simulation and historical data predictor for 9-conch racing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
