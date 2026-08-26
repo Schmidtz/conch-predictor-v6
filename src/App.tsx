@@ -19,6 +19,7 @@ import { DatabaseManager } from './components/DatabaseManager';
 import { ConchRosterView } from './components/ConchRosterView';
 import { LiveRaceSimulator } from './components/LiveRaceSimulator';
 import { SettingsModal } from './components/SettingsModal';
+import { QuickRaceSaveCard } from './components/QuickRaceSaveCard';
 import { Sparkles, Play, RotateCcw, Shuffle, Info, Zap } from 'lucide-react';
 
 const LOCAL_STORAGE_DB_KEY = 'conch_race_records_v1';
@@ -438,6 +439,14 @@ export default function App() {
                 />
               ))}
             </div>
+
+            {/* Actual-result recorder is always visible, even when Monte Carlo fails. */}
+            <QuickRaceSaveCard
+              lineup={lineup}
+              recordCount={records.length}
+              serverConnected={serverConnected}
+              onAddRecord={handleAddRecord}
+            />
 
             {/* Monte Carlo Prediction Results Dashboard */}
             <PredictionDashboard
