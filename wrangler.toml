@@ -13,4 +13,4 @@ not_found_handling = "single-page-application"
 [[d1_databases]]
 binding = "DB"
 database_name = "conch-race-db"
-database_id = "YOUR_DATABASE_ID"
+database_id = "daea0792-8622-458a-9409-26cc34d37f5c"
